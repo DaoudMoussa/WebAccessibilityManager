@@ -1,0 +1,18 @@
+@import './constants.scss';
+
+:export {
+  color-white: $white;
+  color-blue: $blue;
+  color-pink: $pink;
+  color-black: $black;
+  color-yellow: $yellow;
+  color-red: $red;
+  font-xl: $font-xl;
+  font-l: $font-l;
+  font-m: $font-m;
+  font-s: $font-s;
+  font-xs: $font-xs;
+  breakpoint-xs: $breakpoint-xs; // mobile
+  breakpoint-sm: $breakpoint-sm; // tablet - 600 px
+  breakpoint-md: $breakpoint-md;
+}

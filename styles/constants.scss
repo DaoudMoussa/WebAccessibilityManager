@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;500;600&display=swap');
+@import './colors.scss';
+
+// font sizes
+$font-xl: 1.5rem;
+$font-l: 1.25rem;
+$font-m: 1rem;
+$font-s: 0.875rem;
+$font-xs: 0.75rem;
+
+// paddings
+$padding-xl: 30px;
+$padding-l: 30px;
+$padding-m: 15px;
+$padding-s: 10px;
+$padding-xs: 5px;
+
+// breakpoints
+$breakpoint-xs: 0; // mobile
+$breakpoint-sm: 37.5rem; // tablet - 600 px
+$breakpoint-md: 75rem; // desktop - 1200px
+
+// container max-width
+$max-width: 992px;
+
+// font-family
+$font-families: 'Kanit', 'Roboto', sans-serif;

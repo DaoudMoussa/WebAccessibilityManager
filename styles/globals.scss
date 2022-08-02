@@ -1,5 +1,4 @@
-@import './constants.scss';
-
+@import './constants.module.scss';
 html,
 body {
   padding: 0;
@@ -14,3 +13,8 @@ body {
     padding: 0;
   }
 }
+
+//insert here global classes
+// :global {
+ 
+// }

@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/system";
-import variables from '../../styles/variables.module.scss'
+import variables from '@styles/variables.module.scss';
 
 export const lightPalette = {
   primary: {

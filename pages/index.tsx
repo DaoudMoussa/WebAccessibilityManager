@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useSelector } from 'react-redux'
-import { RootState } from '../app/store'
+import { RootState } from '../store'
 
 const Home: NextPage = () => {
   const counter = useSelector((store: RootState) => store.counter);

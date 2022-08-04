@@ -1,16 +1,16 @@
-import React from "react";
-import Input from "./Input";
-import {ComponentMeta, ComponentStory} from '@storybook/react'
+import React from 'react';
+import Input from './Input';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 const mainComponent: ComponentMeta<typeof Input> = {
   title: 'Input Generico',
-  component: Input
-} 
+  component: Input,
+};
 
-export const Text: ComponentStory<typeof Input> = (args) => <Input {...args} />
+export const Text: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 Text.args = {
   type: 'checkbox',
-  label: 'label'
-}
+  label: 'label',
+};
 
-export default mainComponent
+export default mainComponent;

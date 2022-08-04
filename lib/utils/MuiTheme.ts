@@ -3,21 +3,24 @@ import variables from '@styles/variables.module.scss';
 
 export const lightPalette = {
   primary: {
-    main: variables['color-blue']
+    main: variables['color-blue'],
   },
   secondary: {
-    main: variables['color-white']
+    main: variables['color-white'],
   },
   error: {
-    main: variables['color-red']
+    main: variables['color-red'],
   },
   warning: {
-    main: variables['color-yellow']
+    main: variables['color-yellow'],
   },
   info: {
-    main: variables['color-pink']
+    main: variables['color-pink'],
   },
 };
+
+// console.log(lightPalette);
+// console.log(variables);
 
 const theme = createTheme({
   palette: lightPalette,
@@ -30,8 +33,8 @@ const theme = createTheme({
       md: parseInt(variables['breakpoint-md']),
       lg: 0,
       xl: 0,
-    }
+    },
   },
-})
+});
 
 export default theme;

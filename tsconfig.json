@@ -15,15 +15,21 @@
     "jsx": "preserve",
     "incremental": true,
     "declaration": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
-      "@hooks/*": ["hooks/*"],
+      "@hooks/*": ["lib/hooks/*"],
       "@styles/*": ["styles/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["lib/utils/*"]
     }
   },
-  "include": ["next-env.d.ts", "index.d.ts", "**/*.ts", "**/*.tsx", "jest.setup.ts"],
+  "include": [
+    "next-env.d.ts",
+    "lib/interfaces/*.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "jest.setup.ts"
+  ],
   "exclude": ["node_modules"]
 }

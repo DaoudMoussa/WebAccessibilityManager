@@ -1,23 +1,26 @@
-const nextJest = require('next/jest')
+const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
   dir: './',
-})
+});
 
 const jestConfig = {
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+  setupFilesAfterEnv: ['<rootDir>/lib/config/jest.setup.ts'],
   moduleNameMapper: {
-    "^@components(.*)$": "<rootDir>/components$1",
-    "^@pages(.*)$": "<rootDir>/pages$1",
-    "^@hooks(.*)$": "<rootDir>/hooks$1",
-    "^@styles(.*)$": "<rootDir>/styles$1",
-    "^@utils(.*)$": "<rootDir>/utils$1",
-    "\\.(css|less|sass|scss)$": "identity-obj-proxy",
-    "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    '^@components(.*)$': '<rootDir>/components$1',
+    '^@pages(.*)$': '<rootDir>/pages$1',
+    '^@hooks(.*)$': '<rootDir>/hooks$1',
+    '^@styles(.*)$': '<rootDir>/styles$1',
+    "^@utils(.*)$": "<rootDir>/lib/utils$1",
+    '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
+    '\\.(gif|ttf|eot|svg)$': '<rootDir>/__mocks__/fileMock.js',
   },
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/', '<rootDir>/utils/'],
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/node_modules/',
+  ],
   testEnvironment: 'jest-environment-jsdom',
-}
+};
 
-module.exports = createJestConfig(jestConfig)
+module.exports = createJestConfig(jestConfig);

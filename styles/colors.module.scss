@@ -1,32 +1,41 @@
-$white: #FFFDFD;
-$blue: #0B3C49;
-$pink: #A4798D;
-$black: #11040E;
-$yellow: #E9D758;
-$red: #C80421;
+$white: #fffdfd;
+$blue: #0b3c49;
+$pink: #a4798d;
+$black: #11040e;
+$yellow: #e9d758;
+$red: #c80421;
 
 $theme-being-used: light;
 
-@function _basicPalette($primary-color, $secondary-color, $base-color: $white, $error-color: $red, $warning-color: $yellow) {
+@function _basicPalette(
+  $primary-color,
+  $secondary-color,
+  $base-color: $white,
+  $error-color: $red,
+  $warning-color: $yellow
+) {
   @return (
     primary: $primary-color,
     secondary: $secondary-color,
     base: $base-color,
-    error: $error-color, 
+    error: $error-color,
     warning: $warning-color
-  )
+  );
 }
 
 $color-palettes: (
   light: (
     backgrounds: _basicPalette($blue, $pink, $white),
-    texts: _basicPalette($blue, $black, $white)
-  )
+    texts: _basicPalette($blue, $black, $white),
+  ),
 );
 
-
-@function _getColor($variant: primary, $type: backgrounds, $theme-name: $theme-being-used) {
+@function _getColor(
+  $variant: primary,
+  $type: backgrounds,
+  $theme-name: $theme-being-used
+) {
   $theme: map-get($color-palettes, #{$theme-name});
   $theme-type: map-get($theme, #{$type});
   @return map-get($theme-type, #{$variant});
-};
+} ;

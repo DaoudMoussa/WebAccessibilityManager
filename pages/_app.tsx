@@ -1,6 +1,6 @@
 import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from '@emotion/react'
+import { ThemeProvider } from '@mui/material/styles'
 import theme from '../utils/MuiTheme'
 import { Provider } from 'react-redux'
 import store from '../store';
